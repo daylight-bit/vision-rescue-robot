@@ -10,6 +10,11 @@
 
 *根据代码整理的原理示意动画，不是小车实机录像，不代表比赛完成率。*
 
+## 结构图
+
+![项目结构图](assets/architecture.svg)
+
+
 ## 从代码看控制链路
 
 现有资料包含多种试验版本：ROS2 检测结果订阅、BPU 推理调用，以及 HSV 颜色分割脚本。它们不能直接当作同一最终版本的同时运行组件。
@@ -40,6 +45,7 @@ ROS2 版本根据检测框计算中心点，再用横向阈值选择转向动作
 README.md                 控制链路与已知限制
 docs/design-notes.md      坐标、状态和实验计划
 assets/cover.png          项目封面
+assets/architecture.svg   分层结构图
 demo/index.html           可操作的本地演示
 assets/workflow.gif       原理示意动画
 demo/index.html           可操作的本地演示
