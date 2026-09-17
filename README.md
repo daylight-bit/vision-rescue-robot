@@ -40,8 +40,14 @@ ROS2 版本根据检测框计算中心点，再用横向阈值选择转向动作
 README.md                 控制链路与已知限制
 docs/design-notes.md      坐标、状态和实验计划
 assets/cover.png          项目封面
+demo/index.html           可操作的本地演示
 assets/workflow.gif       原理示意动画
+demo/index.html           可操作的本地演示
 ```
+
+## 可操作演示
+
+[打开本地交互 Demo](demo/index.html)（下载仓库后直接用浏览器打开）。页面使用虚拟数据，用来展示交互逻辑。
 
 ## 当前进度
 
