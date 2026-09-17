@@ -1,5 +1,7 @@
 # 视觉引导救援小车｜控制流程学习记录
 
+[![展示版](https://img.shields.io/badge/版本-分析展示版-16a085)](https://github.com/daylight-bit/vision-rescue-robot) [![分析](https://img.shields.io/badge/内容-控制链路-34495e)](docs/design-notes.md)
+
 ![项目封面](assets/cover.png)
 
 围绕智能救援比赛代码，整理摄像头检测结果如何进入小车运动与抓取流程。重点关注目标选择、图像坐标、任务状态和执行反馈之间的关系。
@@ -22,6 +24,24 @@ ROS2 版本根据检测框计算中心点，再用横向阈值选择转向动作
 - 状态切换、延时动作和检测更新如何互相影响？
 
 [控制链路与后续实验](docs/design-notes.md)
+
+## 功能线索
+
+| 环节 | 输入 | 输出 |
+|---|---|---|
+| 目标检测 | 图像/检测结果 | 目标中心位置 |
+| 方向调整 | 横向偏差 | 分段转向动作 |
+| 接近判断 | 纵向位置或编码器变化 | 阶段切换 |
+| 任务执行 | 状态变量 | 行走、抓取等动作 |
+
+## 仓库结构
+
+```text
+README.md                 控制链路与已知限制
+docs/design-notes.md      坐标、状态和实验计划
+assets/cover.png          项目封面
+assets/workflow.gif       原理示意动画
+```
 
 ## 当前进度
 
